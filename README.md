@@ -1,6 +1,5 @@
-# Python Programming
-> I created to pull Problem solving together
-> Added flavor for ML programming also! 
+# ML-Infused Python Toolkit
+> This project combines the art of problem-solving with the power of Python programming. From foundational coding concepts to advanced ML techniques, it's a one-stop shop for anyone looking to level up their skills!
 
 ## Table of Content
 - [Python Programming](#python-programming)
