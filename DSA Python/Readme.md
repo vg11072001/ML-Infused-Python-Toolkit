@@ -13,6 +13,7 @@
     - [4. Sliding Window](#4-sliding-window)
     - [5. Sorting](#5-sorting)
     - [Binary Search](#binary-search)
+    - [Bit Manipulation](#bit-manipulation)
   - [STACK 2](#stack-2)
     - [Trees](#trees)
     - [DFS and BFS](#dfs-and-bfs)
@@ -508,6 +509,12 @@ Target:
 ![alt text](image.png)
 ![alt text](image-1.png)
 ### Binary Search
+
+### Bit Manipulation
+- ![alt text](image-2.png)
+- Reading: https://eng.libretexts.org/Courses/Delta_College/C___Programming_I_(McClanahan)/04%3A_Data_and_Operators/4.13%3A_Bitwise_Operators
+- 
+
 
 ## STACK 2 
 
