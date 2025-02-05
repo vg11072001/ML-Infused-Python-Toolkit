@@ -41,6 +41,7 @@
 * [How to write memory efficient classes in Python?](https://www.geeksforgeeks.org/how-to-write-memory-efficient-classes-in-python/)
 * [Python Design Patterns](https://python-patterns.guide/)
 * [Design Patterns in Python](https://refactoring.guru/design-patterns/python)
+* https://github.com/baliyanvinay/Python-Interview-Preparation
 
 
 ## Data Structures and Alogirthm
@@ -89,6 +90,11 @@ Else
 ```
 
 Full Guide: [Click Here](https://github.com/vg11072001/Python-programming/tree/main/DSA%20Python)
+
+
+### Books
+
+
 
 ##  Object Oriented design
 

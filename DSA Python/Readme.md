@@ -21,6 +21,7 @@
       - [Problem Space of Permutations, Combinations, and Subsets](#problem-space-of-permutations-combinations-and-subsets)
     - [Heaps](#heaps)
     - [Dynamic Programming](#dynamic-programming)
+    - [Graphs](#graphs)
   - [Time Complexity](#time-complexity)
     - [Log(N)](#logn)
   - [Python chits](#python-chits)
@@ -184,22 +185,16 @@ For strs = ["flower", "flow", "flight"]:
  flight comes before flow because fli is lexicographically smaller than flo.
 flow comes before flower because flow is a prefix of flower.
 Result:
-    ```python
-    strs = sorted(["flower", "flow", "flight"])
-    # Output:
-    ['flight', 'flow', 'flower']
-    ```
-
-
-
-
-
-
-
-Watch : [Explaining EVERY Sorting Algorithm (part 1)](https://www.youtube.com/watch?v=AAwYzYkjNTg&t=4s)
+```python
+strs = sorted(["flower", "flow", "flight"])
+# Output:
+['flight', 'flow', 'flower']
+```
 
 
 1. Quick Sort
+
+- 
 ```python
 class Solution:
     def partition(self, nums: List[int], left: int, right: int) -> int:
@@ -247,30 +242,13 @@ class Solution:
         self.quickSort(nums, 0, len(nums) - 1)
         return nums
 ```
-Time & Space Complexity
-* Time complexity: 
-O
-(
-n
-)
-O(n) in average case, 
-O
-(
-n
-2
-)
-O(n 
-2
- ) in worst case.
-* Space complexity: 
-O
-(
-log
-⁡
-n
-)
-O(logn) for recursive stack.
-1. Merge Sort
+
+ Time & Space Complexity
+
+- Time complexity: O(n)O(n) in average case, O(n2)O(n2) in worst case.
+- Space complexity: O(log⁡n)O(logn) for recursive stack.
+
+2. Merge Sort
 
 ```python
 class Solution:
@@ -310,22 +288,11 @@ class Solution:
         return nums
 ```
 Time & Space Complexity
-- Time complexity: 
-O
-(
-n
-log
-⁡
-n
-)
-O(nlogn)
-- Space complexity: 
-O
-(
-n
-)
-O(n)
+- Time complexity: O(nlog⁡n)O(nlogn)
+- Space complexity: O(n)O(n)
+
 3. Heap Sort
+
 ```python
 class Solution:
     def sortArray(self, nums: List[int]) -> List[int]:
@@ -357,23 +324,10 @@ class Solution:
             self.heapify(arr, i, 0)
 ```
 Time & Space Complexity
-* Time complexity: 
-O
-(
-n
-log
-⁡
-n
-)
-O(nlogn)
-* Space complexity: 
-O
-(
-log
-⁡
-n
-)
-O(logn) for recursive stack.
+- Time complexity: O(nlog⁡n)O(nlogn)
+- Space complexity: O(log⁡n)O(logn) for recursive stack.
+
+
 4. Counting Sort
 ```python
 class Solution:
@@ -395,23 +349,9 @@ class Solution:
         return nums
 ```
 Time & Space Complexity
-- Time complexity: 
-O
-(
-n
-+
-k
-)
-O(n+k)
-- Space complexity: 
-O
-(
-n
-)
-- Where 
-n is the size of the array 
-nums and 
-k is the range between the minimum and maximum values in the array.
+- Time complexity: O(n+k)O(n+k)
+- Space complexity: O(n)O(n)
+> Where n is the size of the array nums and k is the range between the minimum and maximum values in the array
 
 5. Radix Sort
 ```python
@@ -454,30 +394,11 @@ class Solution:
         return negatives + positives
 ```
 Time & Space Complexity
-* Time complexity: 
-O
-(
-d
-∗
-n
-)
-O(d∗n)
-* Space complexity: 
-O
-(
-n
-)
-O(n)
-* Where 
-n
-n is the size of the array 
-n
-u
-m
-s
-nums and 
-d
-d is the number of digits in the maximum element of the array.
+- Time complexity: O(d∗n)O(d∗n)
+- Space complexity: O(n)O(n)
+
+> Where n is the size of the array nums and d is the number of digits in the maximum element of the array.
+
 6. Shell Sort
 ```python
 class Solution:
@@ -504,10 +425,6 @@ Time & Space Complexity
 - Time complexity: O(nlog⁡n) in average case, O(n^2) in worst case.
 - Space complexity: O(1)
 
-
-Target:
-![alt text](image.png)
-![alt text](image-1.png)
 ### Binary Search
 
 ### Bit Manipulation
@@ -575,6 +492,12 @@ Watch : [Mastering Dynamic Programming - How to solve any interview problem](htt
 
 DP and Reinforcement Learning : [Medium List](https://medium.com/@numsmt2/list/reinforcement-learning-24c09d78a910)
    
+
+### Graphs
+
+
+
+
 
 ## Time Complexity
 * BiG O complexity - Run Time w.r.t to Input Size
