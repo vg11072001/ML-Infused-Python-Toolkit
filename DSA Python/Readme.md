@@ -41,28 +41,27 @@
 **Problems list resources**
 * Neetcode.io 150 problems
 * Leetcode daily 
-* Leet code contest - Helpful [github repo](https://github.com/doocs/leetcode/blob/main/solution/CONTEST_README_EN.md#biweekly-contest-140)
+* Leetcode contest - Helpful [github repo](https://github.com/doocs/leetcode/blob/main/solution/CONTEST_README_EN.md#biweekly-contest-140)
 
 **Answers**
-* Intution for problem 
-* Approach (which Data structure or  Algorithm?) and daigram
+* Intuition for problem 
+* Approach (which Data structure or  Algorithm?) and diagram
   * Edge cases
 * Code flow design (pseudo code)
 * write
-
 
 **Pile ups 🥹**
 - [ ] STACK1
 - [ ] STACK2
 - [ ] Subarray problems
 - [ ] different type of sorting - merge sort, quick sort
-- [ ] bit manipulations  daily and neet problems (contain contest prblm also)
 - [ ] heaps daily and neet problems 
-- [ ] backtraking neet problems
+- [ ] backtracking neet problems
 - [ ] dp1 revision and some neet problems
-- [ ] dp1 string continue (11/10/24 contest of  problm - how to recognise it)
+- [ ] dp1 string continue (11/10/24 contest of  problem - how to recognize it)
 - [ ] Graphs 
 - [ ] trie
+- [ ] bit manipulations  daily and neet problems (contain contest problem also)
 - [ ] interval problem of neet and daily ques had heap approach check on that file
 
 ***More pending***
@@ -74,33 +73,33 @@
 ### 1. Array
 
    a. RAM (Random Access Memory)
-   * Ram is Measured in bytes, 1 Byte = 8 bits and bit is a digit 0 or 1, so basically ram help to store the advance data sructure.
+   * Ram is Measured in bytes, 1 Byte = 8 bits and bit is a digit 0 or 1, so basically ram help to store the advance data structure.
    * Integer stores in for of bytes, and 1 integer = 4 Bytes or 32 bits.
-   * Ram 2 parts, Values and Address (Bytes). Ex Values: 1, 3, 5 and Its Adress: $0, $4 , $8.
+   * Ram 2 parts, Values and Address (Bytes). Ex Values: 1, 3, 5 and Its Address: $0, $4 , $8.
    * Character takes only 1 byte (ASCII Characters).
 
    b. Arrays and its Properties
    
    **Static Array**
-   * Array store in continous store of data
+   * Array store in continuous store of data
    * 2 parts: 
      * Reading(reach there using for loop to index)
      *  Writing (The size to be fixed, and operation is  `O(1)`). (this can be done easily by Index)
-   * Disadvantage of Array (Static Array): . In Static araay you cannot delete the data, can only overwrite the values. *Not observed in python and Java
+   * Disadvantage of Array (Static Array): . In Static array you cannot delete the data, can only overwrite the values. *Not observed in python and Java
    * To put the value in middle, you have to move/shift every values in array on different array. (Cannot be done on same array)
 
    **Dynamic Array**
-   * The problme solved here is fixed size and also here pusing, poping and shifiting at the end of the value, all will be `O(n)`
-   * Here to get new array just mutiply it by earlier intizalise a new array.
+   * The problem solved here is fixed size and also here pushing, popping and shifting at the end of the value, all will be `O(n)`
+   * Here to get new array just multiply it by earlier initialise a new array.
    * We can deallocate the original array, when modifies the array.
-   * Amortise Time Complexity will be `O(1)`.
+   * Amortize Time Complexity will be `O(1)`.
 
    * Bit-O-Time of Static and Dynamic is same
 
    **Stacks**
-   * Stack supports 3 operations Pop, Push and Peek/Top (Dynamcic array also have this)
-   * Stack is also an array, Stack treats as vertical. (top is end kinda bucket)
-   * Pop can happend only at the end (reversed way of pushed, pop goes like)
+   * Stack supports 3 operations Pop, Push and Peek/Top (Dynamic array also have this)
+   * Stack is also an array, Stack treats as vertical. (top is end kind of bucket)
+   * Pop can happened only at the end (reversed way of pushed, pop goes like)
    * LIFO - Last In First Out DS.
    * Monotonic Increasing / Decreasing Based Questions
    * Stack Parenthesis Questions
@@ -110,8 +109,7 @@
 
    **Prefix Sums**
    * In prefix, the values on which index we are including, we will consider value of that index + pre sum.
-   * Example, to calculate the sum of subarray, Navie way will be `O(n)`. Using Prefix sum, in between values from (n to m) we can get the prefix of (m) - prefix of (n-1) its O(1).
-   
+   * Example, to calculate the sum of subarray, Naive way will be `O(n)`. Using Prefix sum, in between values from (n to m) we can get the prefix of (m) - prefix of (n-1) its O(1).
    ``` python
    Class PrefixSum:
       def __init__(self,nums):
@@ -129,32 +127,47 @@
    * handle this on extreme left on prefix
 
    **Two Pointers**
-   * Two pointes example - Left and Right,  
+   * Two pointes example - Left and Right  
+   * Types: moving position on same places, or reverse an array
+```python
+   def moveZeroes(self, nums: List[int]) -> None:
+	"""
+	Do not return anything, modify nums in-place instead.
+	"""
+	j = 0
+	for i in range(len(nums)):
+		if nums[i] != 0:
+			nums[j], nums[i] = nums[i], nums[j]
+			j+=1
+```    
 
-  **Approaches from python**
-   1. functions () \
-         1.1. lambda function - its act like a function just a small version of def() `lambda x: x * 2` \
-         1.2. map() - 
- 
-     
-   
+- inplace ques technique - `nums[:] = ` whatever manipulations need to be done
+
+**Approaches from python**
+   1. functions( ) / concepts
+	   1. lambda function - its act like a function just a small version of def( ) `lambda x: x * 2` 
+	   2. map( ) - use case `list(map(int, s.split()))`
+	   3. join( ) - `' '.join(map(str, num_list))`
+	   4. List comprehension - `[int(digit) for digit in str(num) if digit =! '3']`
+	   5. any( ) - `any(count > 1 for count in Counter(nums).values())`
+
 ### 2. Hash
 
    **Hash Usage**
-   * Hash Map is good with TC of `O(1)` in Insert, Remove and Search. But the biggest disadvantage is they don't have any order and their ordering on bases of Key TC is O(NlogN).
-   * Use case of Hash Map: create dict type data store , then for loop and within it if consition if name is not in then dict. (python doesn't have special Hash thing so use dict) O(N)
+   * Hash Map is good with TC of `O(1)` in Insert, Remove and Search. But the biggest disadvantage is they don't have any order and their ordering on bases of Key TC is `O(NlogN)`.
+   * Use case of Hash Map: create dict type data store , then for loop and within it if condition if name is not in then dict. (python doesn't have special Hash thing so use `dict` O(N).
    * [HashSets and HashTables in Python](https://www.askpython.com/python/examples/hashsets-and-hashtables-in-python)
 
  **Hashing**
    * Hash Table
    * [Python Hash() method](https://www.geeksforgeeks.org/python-hash-method/) 
    * Hash Map TC
- * 
-   | Operation | Time Complexity |
-   |-----------|-----------------|
-   | search()  | O(1)            |
-   | insert()  | O(1)            |
-   | remove()  | O(1)            |
+ 
+| Operation | Time Complexity |
+|-----------|-----------------|
+| search()  | O(1)            |
+| insert()  | O(1)            |
+| remove()  | O(1)            |
 
 ### 3. Strings
 
@@ -249,6 +262,11 @@ class Solution:
 - Space complexity: O(log⁡n)O(logn) for recursive stack.
 
 2. Merge Sort
+
+Steps:
+> 1. Divide array till we reach the point of subarray length 1 , using recursion technique here
+> 2. so while traversing call merge function to update array directly inplace
+> 3. the update of array will happen using 3 pointers starting of left and right array and 3rd at array to update it!
 
 ```python
 class Solution:
