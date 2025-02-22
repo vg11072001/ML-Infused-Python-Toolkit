@@ -24,28 +24,17 @@
 * Seaborn
 * bookeh
 
-  
 * [Automate the Boring Stuff with Python](https://automatetheboringstuff.com/): Online Book
-* 
 * [Pandas](https://pandas.pydata.org/docs/reference/index.html) Reference API
 * [NumPy](https://numpy.org/doc/stable/reference/index.html) Reference API, [InterviewBit](https://www.interviewbit.com/numpy-cheat-sheet/)
 
+### Pytorch
+- [[]]
+- 
 ## Tools
 - https://github.com/pydantic/pydantic
 
-## Interesting articles on Python
-* [Numerical Analysis & Statistics: MATLAB, R, NumPy](https://hyperpolyglot.org/numerical-analysis#numpy)
-* [Python Pitfall: Mutable Default Arguments](https://towardsdatascience.com/python-pitfall-mutable-default-arguments-9385e8265422)
-* [Interesting topic conver to Optimise python code](https://www.softformance.com/blog/how-to-speed-up-python-code/)
-* [Hyperparameter Optimization in python](https://www.activestate.com/blog/top-10-tools-for-hyperparameter-optimization-in-python/)
-* [How to write memory efficient classes in Python?](https://www.geeksforgeeks.org/how-to-write-memory-efficient-classes-in-python/)
-* [Python Design Patterns](https://python-patterns.guide/)
-* [Design Patterns in Python](https://refactoring.guru/design-patterns/python)
-* https://github.com/baliyanvinay/Python-Interview-Preparation
-
-
 ## Data Structures and Alogirthm
-
 
 ```
 If input array is sorted then
@@ -90,12 +79,22 @@ Else
 ```
 
 Full Guide: [Click Here](https://github.com/vg11072001/Python-programming/tree/main/DSA%20Python)
-
-
 ### Books
 
+## Programming 
 
-
+- [Understanding the basics of Data-to-bits](Data-to-bits.md)
+- [About Pickle file](Pickle%20file.md)
 ##  Object Oriented design
 
 Full Guide: [Click Here](https://github.com/vg11072001/Python-programming/tree/main/Object%20Oriented%20ODesign)
+## Interesting articles on Python
+* [Numerical Analysis & Statistics: MATLAB, R, NumPy](https://hyperpolyglot.org/numerical-analysis#numpy)
+* [Python Pitfall: Mutable Default Arguments](https://towardsdatascience.com/python-pitfall-mutable-default-arguments-9385e8265422)
+* [Interesting topic conver to Optimise python code](https://www.softformance.com/blog/how-to-speed-up-python-code/)
+* [Hyperparameter Optimization in python](https://www.activestate.com/blog/top-10-tools-for-hyperparameter-optimization-in-python/)
+* [How to write memory efficient classes in Python?](https://www.geeksforgeeks.org/how-to-write-memory-efficient-classes-in-python/)
+* [Python Design Patterns](https://python-patterns.guide/)
+* [Design Patterns in Python](https://refactoring.guru/design-patterns/python)
+* https://github.com/baliyanvinay/Python-Interview-Preparation
+
