@@ -6,7 +6,7 @@
 - [Data Structures and Algorithm](#data-structures-and-algorithm)
   - [Table of Content](#table-of-content)
   - [Status](#status)
-  - [STACK 1](#stack-1)
+  - [STACK 1                                                                                                         ](#stack-1)
     - [1. Array](#1-array)
     - [2. Hash](#2-hash)
     - [3. Strings](#3-strings)
@@ -211,7 +211,11 @@ strs = sorted(["flower", "flow", "flight"])
 ```python
 class Solution:
     def partition(self, nums: List[int], left: int, right: int) -> int:
-        mid = (left + right) >> 1
+		'''
+		The **median-of-three** strategy ensures a good pivot choice, reducing the risk of worst-case performance. 
+		pivot chosen is the **median** of the first, middle, and last elements of the subarray.
+		'''
+        mid = (left + right) >> 1 # efficiency in calculating middle value
         nums[mid], nums[left + 1] = nums[left + 1], nums[mid]
 
         if nums[left] > nums[right]:
@@ -224,7 +228,9 @@ class Solution:
         pivot = nums[left + 1]
         i = left + 1
         j = right
-
+		# `nums[left]` is the smallest of the three. 
+		# `nums[right]` is the largest of the three.
+		# `nums[left + 1]` (the middle element) is the median and is chosen as the pivot.
         while True:
             while True:
                 i += 1
@@ -237,16 +243,19 @@ class Solution:
             if i > j:
                 break
             nums[i], nums[j] = nums[j], nums[i]
-
         nums[left + 1], nums[j] = nums[j], nums[left + 1]
         return j
 
     def quickSort(self, nums: List[int], left: int, right: int) -> None:
+	    '''
+	    compared the values with  of l and r values
+	    '''
         if right <= left + 1:
             if right == left + 1 and nums[right] < nums[left]:
                 nums[left], nums[right] = nums[right], nums[left]
             return
 
+		# first we will run partition on 0 and n-1
         j = self.partition(nums, left, right)
         self.quickSort(nums, left, j - 1)
         self.quickSort(nums, j + 1, right)
@@ -259,7 +268,40 @@ class Solution:
  Time & Space Complexity
 
 - Time complexity: O(n)O(n) in average case, O(n2)O(n2) in worst case.
-- Space complexity: O(log⁡n)O(logn) for recursive stack.
+- Space complexity: O(log⁡n)O(logn) for recursive stack. 
+- Another implementation of quick sort when last element taken:
+
+  ```python
+	# Implementation of QuickSort
+def quickSort(arr, s, e):
+    if e - s + 1 <= 1:
+        return
+
+    pivot = arr[e]
+    left = s # pointer for left side
+
+    # Partition: elements smaller than pivot on left side, by default greater than value will be on right side
+    for i in range(s, e):
+        if arr[i] < pivot:
+            tmp = arr[left]
+            arr[left] = arr[i]
+            arr[i] = tmp
+            left += 1
+
+    # Move pivot in-between left & right sides
+    arr[e] = arr[left]
+    arr[left] = pivot
+    
+    # Quick sort left side
+    quickSort(arr, s, left - 1)
+
+    # Quick sort right side
+    quickSort(arr, left + 1, e)
+
+    return arr
+
+	```
+  
 
 2. Merge Sort
 
@@ -443,7 +485,11 @@ Time & Space Complexity
 - Time complexity: O(nlog⁡n) in average case, O(n^2) in worst case.
 - Space complexity: O(1)
 
+### Linked List
+
+
 ### Binary Search
+
 
 ### Bit Manipulation
 - ![alt text](image-2.png)
