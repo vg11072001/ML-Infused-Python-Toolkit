@@ -6,12 +6,13 @@
 - [Data Structures and Algorithm](#data-structures-and-algorithm)
   - [Table of Content](#table-of-content)
   - [Status](#status)
-  - [STACK 1                                                                                                         ](#stack-1)
+  - [STACK 1](#stack-1)
     - [1. Array](#1-array)
     - [2. Hash](#2-hash)
     - [3. Strings](#3-strings)
     - [4. Sliding Window](#4-sliding-window)
     - [5. Sorting](#5-sorting)
+    - [Linked List](#linked-list)
     - [Binary Search](#binary-search)
     - [Bit Manipulation](#bit-manipulation)
   - [STACK 2](#stack-2)
@@ -518,6 +519,8 @@ Time & Space Complexity
   * Backtracking is not regarded as an optimal problem-solving technique. It's not efficient for problems that have many solutions or require a lot of backtracking steps. In such cases, you may need to use other techniques. 
   * Backtracking can be used to solve problems such as Sudoku, N-queens, subset sum, and Hamiltonian cycle.
 
+> Check its notebook the recursion is covered in detail: [09.Backtracking](09.Backtracking.ipynb)
+
 #### Problem Space of Permutations, Combinations, and Subsets
 
 - **Permutations**: $( N! ) (for ( N )$ elements), generate all possible arrangements of elements.
@@ -526,45 +529,42 @@ Time & Space Complexity
 
 - **Subsets**: $( 2^N )$ (since each element can either be included or excluded from the subset), generate all possible combinations of a set of elements (including the empty set).
 
-* **Iterative, recursive/backtracking, and lexicographic generation (bitmasking)** are the three main strategies, each suited for different scenarios. [InDetail Read NoteBook](09.Backtracking.ipynb)
-
+* **Iterative, recursive/backtracking, and lexicographic generation (bit masking)** are the three main strategies, each suited for different scenarios. [In Detail Read Notebook](09.Backtracking.ipynb)
 
 ### Heaps
-* 
-   | Operation | Time Complexity |
-   |-----------|-----------------|
-   | top()     | O(1)            |
-   | insert()  | O(log n)         |
-   | remove()  | O(log n)         |
-   | heapify() | O(n)            |
-* adding value on heap in one go is `O(logn)`
-* adding value on heap one a time (like thru some operations the value results) is `O(nlogn)`
+
+| Operation | Time Complexity |
+| --------- | --------------- |
+| top()     | O(1)            |
+| inset()   | O(log n)        |
+| remove()  | O(log n)        |
+| heapify() | O(n)            |
+* adding value on heap in one go is `O(log n)`
+* adding value on heap one a time (like thru some operations the value results) is `O(n*log n)`
 
 ### Dynamic Programming
 
-* Fiboonacci number - instance of DP
-  * convert Recusion to DP
-  * While solving recusion problem, first approach brute force, then add memoization to it and second approach is bottom up.
-  * True DP is Bottom up and partial considered memoization
+* Fibonacci number - instance of DP
+  * Convert Recursion to DP
+  * While solving recursion problem, first approach brute force, then add memorization to it and second approach is bottom up.
+  * True DP is Bottom up and partial considered memorization
   
-* Approach to solve prblems Dynamic programming problem :
+* Approach to solve problems Dynamic programming problem :
 1. Check if we can create the decision tree
-2. Check if we can create the memoization table
+2. Check if we can create the memorization table
 3. Use it for creating bottom up DP
 
 Watch : [Mastering Dynamic Programming - How to solve any interview problem](https://www.youtube.com/watch?v=Hdr64lKQ3e4)
 
 DP and Reinforcement Learning : [Medium List](https://medium.com/@numsmt2/list/reinforcement-learning-24c09d78a910)
-   
-
 ### Graphs
-
+- 
 
 
 
 
 ## Time Complexity
-* BiG O complexity - Run Time w.r.t to Input Size
+* Big O complexity - Run Time w.r.t to Input Size
 
    ![Time  Complexity](TimeComplexity.png)
    For More Read:
