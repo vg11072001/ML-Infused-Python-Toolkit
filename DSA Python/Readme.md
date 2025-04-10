@@ -37,19 +37,21 @@
     - [Geek for Geek | Python Programming](#geek-for-geek--python-programming)
       - [1. Python Practise](#1-python-practise)
       - [2. Data Structures SDE sheet by love Babbar](#2-data-structures-sde-sheet-by-love-babbar)
-## Status 
+
+%% ## Logs
 
 **Problems list resources**
 * Neetcode.io 150 problems
 * Leetcode daily 
 * Leetcode contest - Helpful [github repo](https://github.com/doocs/leetcode/blob/main/solution/CONTEST_README_EN.md#biweekly-contest-140)
+* For Interview basic Problem Check List: [Link](https://leetcode.com/problem-list/rab78cw1/) 
 
 **Answers**
 * Intuition for problem 
 * Approach (which Data structure or  Algorithm?) and diagram
   * Edge cases
 * Code flow design (pseudo code)
-* write
+* Write
 
 **Pile ups 🥹**
 - [ ] STACK1
@@ -69,7 +71,7 @@
 - [ ] trees notes
 - [ ] greedy 
 - [ ] excel complete (150 problems)
-
+ %%
 ## STACK 1 
 ### 1. Array
 
@@ -111,6 +113,7 @@
    **Prefix Sums**
    * In prefix, the values on which index we are including, we will consider value of that index + pre sum.
    * Example, to calculate the sum of subarray, Naive way will be `O(n)`. Using Prefix sum, in between values from (n to m) we can get the prefix of (m) - prefix of (n-1) its O(1).
+   
    ``` python
    Class PrefixSum:
       def __init__(self,nums):
@@ -130,6 +133,7 @@
    **Two Pointers**
    * Two pointes example - Left and Right  
    * Types: moving position on same places, or reverse an array
+   
 ```python
    def moveZeroes(self, nums: List[int]) -> None:
 	"""
@@ -558,9 +562,50 @@ Watch : [Mastering Dynamic Programming - How to solve any interview problem](htt
 
 DP and Reinforcement Learning : [Medium List](https://medium.com/@numsmt2/list/reinforcement-learning-24c09d78a910)
 ### Graphs
+
+It has a vertices `V` and edges as `E`. And the formula followed here is `E <= V^2` .
+- With direction ![](Pasted%20image%2020250410014419.png)
+- Without directions
+
+#### Representation of Graphs:
+
+1. Matrix
+- ![](Pasted%20image%2020250410015051.png)
+
+2. Adjacency Matrix
+
+- dimension represents the node: (0, 1, 2, 3)
+- ![](Pasted%20image%2020250410015219.png)
+- 
+
+3. Adjacency List
+
+- second will be directed or undirected
+-  ![](Pasted%20image%2020250410015521.png)
+- ![](Pasted%20image%2020250410015647.png)
+- ![](Pasted%20image%2020250410020445.png)
+
+#### DFS:
+- 
+
+#### BFS:
 - 
 
 
+#### Algorithm: Dijkstra 
+
+- Thinking points: adjoining list -> heap initiation -> min. Heap -> current -> Heapify -> shortest
+- Approach: 
+- 2 ponts used to create heap
+
+
+#### Algorithm : Prism_s
+
+
+#### Algorithm: Kruskal_s
+
+
+#### Algorithm: Topological Sort
 
 
 ## Time Complexity
