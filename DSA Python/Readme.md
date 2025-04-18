@@ -5,7 +5,6 @@
 ## Table of Content
 - [Data Structures and Algorithm](#data-structures-and-algorithm)
   - [Table of Content](#table-of-content)
-  - [Status](#status)
   - [STACK 1](#stack-1)
     - [1. Array](#1-array)
     - [2. Hash](#2-hash)
@@ -22,7 +21,10 @@
       - [Problem Space of Permutations, Combinations, and Subsets](#problem-space-of-permutations-combinations-and-subsets)
     - [Heaps](#heaps)
     - [Dynamic Programming](#dynamic-programming)
+    - [Tries](#tries)
     - [Graphs](#graphs)
+  - [**DFS:**](#dfs)
+  - [**BFS:**](#bfs)
   - [Time Complexity](#time-complexity)
     - [Log(N)](#logn)
   - [Python chits](#python-chits)
@@ -419,6 +421,7 @@ Time & Space Complexity
 > Where n is the size of the array nums and k is the range between the minimum and maximum values in the array
 
 5. Radix Sort
+
 ```python
 class Solution:
     def sortArray(self, nums: List[int]) -> List[int]:
@@ -458,6 +461,7 @@ class Solution:
 
         return negatives + positives
 ```
+
 Time & Space Complexity
 - Time complexity: O(d∗n)O(d∗n)
 - Space complexity: O(n)O(n)
@@ -486,6 +490,7 @@ class Solution:
         shell_sort(nums, n)
         return nums
 ```
+
 Time & Space Complexity
 - Time complexity: O(nlog⁡n) in average case, O(n^2) in worst case.
 - Space complexity: O(1)
@@ -506,14 +511,18 @@ Time & Space Complexity
 
 ### Trees
 
+
+
 ### DFS and BFS
+
+
 
 ### Recursion (Backtracking, Graphs, DP and more)
 
 * [On Backtracking about Maze](https://sulugar1.tripod.com/games/maze/mazes.htm)
   * Unlike the simple recursion examples we had encountered, a backtracking procedure goes **through multiple winding and unwinding stages** as it loops through the choices it has to make at every node. 
-  * One of the most common applications of backtracking is in the evaluation of moves for strategy games like chess. We will look at a much simpler game, tic-tac-toe, and see how a backtracking strategy can be used to ensure that we can never lose the game.
-  * Maze 
+  * One of the most common applications of backtracking is in the evaluation of moves for strategy games like chess. We will look at a much simpler game, tic-tac-toe, and see how a backtracking strategy can be used to ensure that we can never lose the game. 
+  * Maze  
      - ![maze](Maze.png)
   * You can use backtracking when you need to find all or some solutions to a problem that meets certain constraints, and the search space is too large or complex to use brute force or greedy methods. Backtracking is useful when: 
     * The problem involves exploring multiple possibilities 
@@ -545,6 +554,7 @@ Time & Space Complexity
 | heapify() | O(n)            |
 * adding value on heap in one go is `O(log n)`
 * adding value on heap one a time (like thru some operations the value results) is `O(n*log n)`
+* notes are added on notebook  [In Detail Read Notebook](11.Heaps.ipynb)
 
 ### Dynamic Programming
 
@@ -561,13 +571,32 @@ Time & Space Complexity
 Watch : [Mastering Dynamic Programming - How to solve any interview problem](https://www.youtube.com/watch?v=Hdr64lKQ3e4)
 
 DP and Reinforcement Learning : [Medium List](https://medium.com/@numsmt2/list/reinforcement-learning-24c09d78a910)
+
+### Tries 
+
+ 1. **Tries - Prefix Tree** 
+- Different types of tree: Trie 
+- Insert word - O(1) and search word - O(1) and **search prefix - O(1)**  
+- 
+
+2. **Union Find**  
+- 
+
+3. **Segment Tree**  
+- 
+
+
+4. **Iterative DFS**  
+- 
+
+
 ### Graphs
 
 It has a vertices `V` and edges as `E`. And the formula followed here is `E <= V^2` .
-- With direction ![](Pasted%20image%2020250410014419.png)
-- Without directions
+- With direction    ![](Pasted%20image%2020250410014419.png)
+- Without directions 
 
-#### Representation of Graphs:
+**Representation of Graphs:**
 
 1. Matrix
 - ![](Pasted%20image%2020250410015051.png)
@@ -585,27 +614,30 @@ It has a vertices `V` and edges as `E`. And the formula followed here is `E <= V
 - ![](Pasted%20image%2020250410015647.png)
 - ![](Pasted%20image%2020250410020445.png)
 
-#### DFS:
-- 
-
-#### BFS:
+**DFS:**
 - 
 
 
-#### Algorithm: Dijkstra 
+**BFS:**
+- 
+
+
+**Algorithm: Dijkstra** 
 
 - Thinking points: adjoining list -> heap initiation -> min. Heap -> current -> Heapify -> shortest
 - Approach: 
-- 2 ponts used to create heap
+- 2 points used to create heap: 
 
 
-#### Algorithm : Prism_s
+
+**Algorithm : Prism_s**
+- cyclic undirected 
 
 
-#### Algorithm: Kruskal_s
+**Algorithm: Kruskal_s**
 
 
-#### Algorithm: Topological Sort
+**Algorithm: Topological Sort**
 
 
 ## Time Complexity
