@@ -89,13 +89,13 @@
    * Array store in continuous store of data
    * 2 parts: 
      * Reading(reach there using for loop to index)
-     *  Writing (The size to be fixed, and operation is  `O(1)`). (this can be done easily by Index)
+     *  Writing (The size to be fixed, and operation is  `O(1)`). (this can be done easily by Index) 
    * Disadvantage of Array (Static Array): . In Static array you cannot delete the data, can only overwrite the values. *Not observed in python and Java
    * To put the value in middle, you have to move/shift every values in array on different array. (Cannot be done on same array)
 
    **Dynamic Array**
    * The problem solved here is fixed size and also here pushing, popping and shifting at the end of the value, all will be `O(n)`
-   * Here to get new array just multiply it by earlier initialise a new array.
+   * Here to get new array just multiply it by earlier initialise a new array. 
    * We can deallocate the original array, when modifies the array.
    * Amortize Time Complexity will be `O(1)`.
 
@@ -156,12 +156,12 @@
 	   2. map( ) - use case `list(map(int, s.split()))`
 	   3. join( ) - `' '.join(map(str, num_list))`
 	   4. List comprehension - `[int(digit) for digit in str(num) if digit =! '3']`
-	   5. any( ) - `any(count > 1 for count in Counter(nums).values())`
+	   5. any( ) - `any(count > 1 for count in Counter(nums).values())` 
 
 ### 2. Hash
 
    **Hash Usage**
-   * Hash Map is good with TC of `O(1)` in Insert, Remove and Search. But the biggest disadvantage is they don't have any order and their ordering on bases of Key TC is `O(NlogN)`.
+   * Hash Map is good with TC of `O(1)` in Insert, Remove and Search. But the biggest disadvantage is they don't have any order and their ordering on bases of Key TC is `O(NlogN)`. 
    * Use case of Hash Map: create dict type data store , then for loop and within it if condition if name is not in then dict. (python doesn't have special Hash thing so use `dict` O(N).
    * [HashSets and HashTables in Python](https://www.askpython.com/python/examples/hashsets-and-hashtables-in-python)
 
